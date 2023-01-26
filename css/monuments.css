@@ -1,0 +1,104 @@
+main{
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*Lupa*/
+.lupa {
+
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid #003D4C;
+    font-family: 'MarkLight';
+    font-size: 20px;
+    size: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    border-right: none;
+}
+
+#buscar{
+    height: 40px;
+    width: 1110px;
+    background-color: transparent;
+    border: 1px solid #003D4C;
+    border-left: none;
+    font-family: 'MarkLight';
+    font-size: 20px;
+    size: 30px;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+}
+.form_estilo{
+display: inline-flex;
+}
+.busqueda{
+    margin: auto;
+    max-width: 1200px;
+    padding: 25px;
+}
+#paginador,
+#publicaciones {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nombres_Monumentos{
+    font-size: 24px;
+    font-family: 'MarkBold';
+    color: #003D4C;
+    padding-bottom: 10px;
+}
+.imagen{
+
+    width: 350px;
+    height: 350px;
+}
+#publicaciones{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#publicaciones div {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    margin-bottom: 6px;
+}
+
+#publicaciones li:not( :last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+#paginador {
+    display: flex;
+    justify-content: center;
+}
+
+#paginador li {
+    margin: 2px;
+}
+
+#paginador a {
+    display: flex;
+    width: 4ch;
+    height: 4ch;
+    background: #487a7b;
+    align-items: center;
+    justify-content: center;
+    font-family: 'MarkLight';
+    font-size: 15px;
+    border-radius: 50%;
+    color: #F3EBEB;
+    text-decoration: none;
+}
+
+#paginador a.actual {
+    background: #003D4C;
+    color: #F3EBEB;
+}

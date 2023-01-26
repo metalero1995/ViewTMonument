@@ -1,0 +1,159 @@
+/*Declaramos una nueva fuente*/
+@font-face {
+  font-family: "MarkLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url(FF/Mark-Light.woff2), url(/FF/Mark-Light.ttf) format("ttf"),
+    url(/FF/Mark-Light.woff) format("woff"),
+    url(/FF/Mark-Light.eot) format("eot");
+}
+
+@font-face {
+  font-family: "MarkBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(FF/Mark-Bold.woff2), url(/FF/Mark-Bold.ttf) format("ttf"),
+    url(/FF/Mark-Bold.woff) format("woff"),
+    url(/FF/Mark-Bold.woff2) format("eot");
+}
+@media all and (min-width: 950px) {
+  /*
+----------------------------------------------------------
+  ELEMENTOS GLOBALES
+  --------------------------------------------------------
+  */
+  /*Quita padding y margin innecesarios para todos los elementos*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*Elementos necesarios para el body, quitar desplazamiento h, minimo tamaño de pantalla y color de fondo*/
+  body {
+    overflow-x: hidden;
+    min-width: 100vh;
+    min-height: 100vh;
+    background: #f3ebeb;
+  }
+  /*Elemento que cambia la scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #003d4c;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f3ebeb;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #003d4c;
+  }
+
+  .pagina_completa {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100vh;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /*///////////////////////////////*/
+  /*           SIDEBAR             */
+  /*********************************/
+
+  .sidebar {
+    width: 25%;
+    min-height: 100vh;
+    background-color: #003d4c;
+  }
+
+  .logo {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+
+  .img_logo {
+    width: 90%;
+    display: block;
+    margin: 50px 4px 30px;
+  }
+
+  .opciones {
+    width: 100%;
+  }
+
+  .opcion {
+    width: 260px;
+    font-family: "MarkLight";
+    color: #f3ebeb;
+    font-size: 20px;
+    /* font-weight: 900; */
+    display: block;
+    margin: 0 auto;
+    padding: 0 15px 20px;
+  }
+
+  .img_opcion {
+    width: 15%;
+    padding-right: 3px;
+  }
+
+  .seleccionado {
+    color: #17e933;
+  }
+
+  /*///////////////////////////////*/
+  /*            CUERPO             */
+  /*********************************/
+
+  .cuerpo {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3ebeb;
+  }
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .titulo {
+    font-family: "MarkLight";
+    color: #003d4c;
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  .cerrar_sesion {
+    font-family: "MarkLight";
+    color: #003d4c;
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .graficas {
+    width: 100%;
+  }
+
+  .grafica {
+    width: 70%;
+    border-radius: 10px;
+    display: block;
+    margin: 30px auto;
+  }
+
+  /*///////////////////////////////*/
+  /*             Tabla             */
+  /*********************************/
+
+}

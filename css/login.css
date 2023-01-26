@@ -1,0 +1,403 @@
+/*Ordenamos todo para que ocupe el espacio total del html*/
+.ordenar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Todo el contenido de ingreso*/
+.contenido_principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+/*Tipo de letra para el titulo principal*/
+.titulo_principal {
+  margin: 20px;
+  font-family: 'MarkBold';
+  color: #003D4C;
+  font-size: 50px;
+}
+
+/*Contenido del logueo */
+.contenido_secundario_p1 {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Párrafos iniciales del logueo*/
+.parrafos_primarios {
+  font-family: 'MarkBold';
+  color: #003D4C;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/*Formato de diseño del input*/
+.input {
+  height: 40px;
+  width: 680px;
+  background-color: transparent;
+  border: 1px solid #003D4C;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+/*Elementos secundarios del logueo*/
+.contenido_secundario_p2 {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 680px;
+  margin-bottom: 15px;
+  font-family: 'MarkLight';
+  font-size: 18px;
+  text-decoration: none;
+  color: #003D4C;
+}
+
+/*Elementos secundarios del logueo para etiquetas de a*/
+.contenido_secundario_p2 a {
+  text-decoration: none;
+  color: #003D4C;
+  cursor: pointer;
+}
+
+/*Elementos secundarios del logueo para el hover de etiquetas de a*/
+.contenido_secundario_p2 a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #003D4C;
+}
+
+/*Botón de formato de login*/
+.submit {
+  font-size: 20px;
+  font-family: 'MarkLight';
+  color: #F3EBEB;
+  background-color: #003D4C;
+  border-style: none;
+  width: 680px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/*Botón de formato de hover login*/
+.submit:hover {
+  font-weight: bold;
+}
+
+/*Linea horizontal (no hay mucho que decir xd)*/
+.linea_horizontal {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  width: 680px;
+  border: 1/2px solid #003D4C;
+}
+
+/*Formato del botón por el cual no tenemos acceso a la cuenta*/
+.boton_noAcc {
+  background-color: transparent;
+  font-family: 'MarkLight';
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  color: #003D4C;
+  cursor: pointer;
+  padding-bottom: 50px;
+}
+
+/*Formato del hover del botón por el cual no tenemos acceso a la cuenta*/
+.boton_noAcc:hover {
+  font-weight: bold;
+}
+
+/*Swal libreria*/
+.swal-icon--warning__body, .swal-icon--warning__dot{
+  background-color: #003D4C;
+}
+.swal-text{
+  font-family: 'MarkLight';
+  color: #003D4C;
+}
+.swal-button{
+  font-family: 'MarkBold';
+  border-radius: 0px;
+  background-color: #003D4C;
+  color: #F3EBEB;
+}
+.swal-button:not([disabled]):hover {
+  background-color: #034a5c;
+}
+@keyframes pulseWarning{
+  0%{
+    border-color: #003D4C;
+  }
+  100%{
+    border-color: #003D4C;
+  }
+}
+/* -------------------------------------------------
+
+MODAL
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*Variables para el modal*/
+:root {
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+
+/*Formato general del modal*/
+.modal,
+.modal2 {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+
+/*Visibilidad del modal*/
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Contiene todo lo visible y tangible del modal*/
+.modal-dialog {
+  position: relative;
+  max-width: 680px;
+  max-height: 90vh;
+  border-radius: 5px;
+  background: #F3EBEB;
+  overflow: auto;
+  cursor: default;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/*Formato para el body del modal*/
+.modal-content {
+  padding: 1rem;
+  padding-top: 0px;
+}
+
+/*Formato para el header del modal*/
+.modal-header {
+  font-family: 'MarkBold';
+  color: #003D4C;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  background: #F3EBEB;
+}
+
+/*Espacio del header para el modal*/
+.modal-header .close-modal {
+  font-size: 1.5rem;
+}
+
+/*botón para cerrar el modal*/
+.close-modal {
+  color: #003D4C;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/*Linea horizontal (no hay mucho que decir xd)*/
+.linea_horizontal_2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 680px;
+  border: 1/2px solid #003D4C;
+}
+
+.input_registro {
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #003D4C;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-top: 20px;
+  padding: 5px;
+  outline: none;
+  border-radius: 6px;
+}
+
+.p_correo_tel {
+  font-family: 'MarkLight';
+  font-size: 20px;
+  color: #003D4C;
+  margin-top: 20px;
+}
+
+.input_registro_flex {
+  display: flex;
+}
+
+.contenido_secundario_p3 {
+  text-align: justify;
+  margin-top: 20px;
+  font-family: 'MarkLight';
+  font-size: 18px;
+  text-decoration: none;
+  color: #003D4C;
+}
+
+.contenido_secundario_p3 a {
+  text-decoration: none;
+  color: #003D4C;
+}
+
+.contenido_secundario_p3 a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #003D4C;
+}
+
+/*Formato del boton de registro*/
+.registro {
+  margin-top: 20px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-family: 'MarkLight';
+  color: white;
+  background-color: #003D4C;
+  border-style: none;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+
+.modal-dialog2 {
+  position: relative;
+  max-width: 700px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: #F3EBEB;
+  overflow: auto;
+  cursor: default;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/*Formato del hover del boton de registro*/
+.registro:hover {
+  font-weight: bold;
+}
+
+/*Animaciones para el modal*/
+[data-animation] .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s var(--bounceEasing);
+}
+
+[data-animation].is-visible .modal-dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutLeft"] .modal-dialog {
+  transform: translateX(-100%);
+}
+
+[data-animation="slideInOutLeft"].is-visible .modal-dialog {
+  transform: none;
+}
+
+
+@media screen and (max-width: 1050px) {}
+
+@media screen and (max-width: 700px) {
+
+  .input,
+  .submit,
+  .contenido_secundario_p2,
+  .linea_horizontal,
+  .titulo_principal {
+    width: 400px;
+  }
+
+  .modal-header {
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .input,
+  .submit,
+  .contenido_secundario_p2,
+  .linea_horizontal,
+  .titulo_principal,
+  .boton_noAcc {
+    width: 280px;
+  }
+
+  .contenido_secundario_p2 {
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .titulo_principal {
+    font-size: 40px;
+  }
+
+  .modal-header {
+    font-size: 30px;
+  }
+
+  .parrafos_primarios,  .modal-header .close-modal {
+    font-size: 20px;
+  }
+
+  .contenido_secundario_p2 div {
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+  .contenido_secundario_p2 a {
+    padding-bottom: 20px;
+
+  }
+
+  .boton_noAcc, .input,   .input_registro,
+  .contenido_secundario_p3, .p_correo_tel {
+    font-size: 16px;
+  }
+
+  .input_registro_flex {
+    flex-direction: column;
+  }
+
+  .input_registro_flex p {
+    visibility: hidden;
+    size: 0px;
+    height: 0px;
+  }
+
+}
